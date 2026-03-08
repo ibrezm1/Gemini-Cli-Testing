@@ -1,0 +1,56 @@
+{
+  "theme": "GitHub",
+  "usageStatisticsEnabled": true,
+  "checkpointing": {
+    "enabled": true
+  },
+  "mcp": {
+    "allowed": [
+      "myserver",
+      "sqlite_server",
+      "playwright",
+      "github"
+    ],
+    "excluded": [
+      "experimental-server"
+    ]
+  },
+  "mcpServers": {
+    "myserver": {
+      "command": ".venv/Scripts/python.exe",
+      "args": [
+        "mock-mcp.py",
+        "--port",
+        "8080"
+      ],
+      "cwd": ".",
+      "timeout": 15000
+    },
+    "sqlite_server": {
+      "command": ".venv/Scripts/python.exe",
+      "args": [
+        "sqlite_mcp.py",
+        "--port",
+        "8081"
+      ],
+      "cwd": ".",
+      "timeout": 15000
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "cwd": ".",
+      "timeout": 15000
+    },
+    "github": {
+      "httpUrl": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer $GITHUB_MCP_PAT"
+      },
+      "cwd": ".",
+      "timeout": 15000
+    }
+  }
+}
