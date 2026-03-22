@@ -9,7 +9,8 @@
       "myserver",
       "sqlite_server",
       "playwright",
-      "github"
+      "github",
+      "powershell"
     ],
     "excluded": [
       "experimental-server"
@@ -51,6 +52,21 @@
       },
       "cwd": ".",
       "timeout": 15000
+    },
+    "powershell": {
+      "command": "node",
+      "args": [
+        "../psc-server.js"
+      ],
+      "cwd": "./psc",
+      "timeout": 30000
+    }
+  },
+  "tools": {
+    "shell": {
+      "enableInteractiveShell": true,
+      "showColor": true,
+      "pager": "less"
     }
   }
 }
