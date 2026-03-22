@@ -41,7 +41,15 @@ In practical terms, Gemini CLI acts like a supercharged pair programmer and comm
 
 ## Getting Started
 
-**Prerequisites:** You need to have a Python virtual environment (`venv`) set up and install the required Python packages. For PowerShell support, you must also install the following npm packages:
+**Prerequisites:** 
+
+For Windows PowerShell users, we have provided a `setup.ps1` script that automates the environment setup. Running `.\setup.ps1` will automatically:
+1. Create a Python virtual environment (`.venv`).
+2. Activate the virtual environment.
+3. Install the required Python packages from `requirements.txt`.
+4. Install the necessary npm packages for PowerShell support (`@modelcontextprotocol/sdk`, `node-powershell`, `zod`).
+
+Alternatively, you can manually set up a Python virtual environment, install the required Python packages, and run the following for the npm dependencies:
 
 ```bash
 npm install @modelcontextprotocol/sdk node-powershell zod

@@ -2,7 +2,7 @@
 $ErrorActionPreference = "Stop"
 
 Write-Host "Setting up Python virtual environment..."
-python -m venv venv
+python -m venv .venv
 
 Write-Host "Activating virtual environment..."
 # Check if Activate.ps1 exists before dot-sourcing
