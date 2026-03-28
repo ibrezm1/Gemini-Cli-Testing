@@ -10,7 +10,8 @@
       "sqlite_server",
       "playwright",
       "github",
-      "powershell"
+      "powershell",
+      "ssh-mcp"
     ],
     "excluded": [
       "experimental-server"
@@ -60,6 +61,21 @@
       ],
       "cwd": "./psc",
       "timeout": 30000
+    },
+    "ssh-mcp": {
+            "command": "npx",
+            "args": [
+                "ssh-mcp",
+                "-y",
+                "--",
+                "--host=192.168.1.65",
+                "--port=22",
+                "--user=ibrez",
+                "--password=robotics",
+                //"--key=path/to/key",
+                "--timeout=30000",
+                "--maxChars=none"
+            ]
     }
   },
   "tools": {
