@@ -6,8 +6,8 @@ const { chromium } = require('playwright');
   const context = await browser.newContext();
   const page = await context.newPage();
 
-  try {
-    // Navigate to the target website
+  try { 
+    // Navigate to the target website 
     console.log('Navigating to https://automationintesting.online/...');
     await page.goto('https://automationintesting.online/');
 
